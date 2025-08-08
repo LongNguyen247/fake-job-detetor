@@ -7,7 +7,7 @@ def load_model_and_vectorizer():
 
 def predict_job_post(text):
     model, vectorizer = load_model_and_vectorizer()
-    vect = vectorizer.transform([text])
+    vect = vectorizer.transform([text])      
     prediction = model.predict(vect)[0]
     confidence = model.predict_proba(vect)[0][1]
     label = "Suspicious" if prediction == 1 else "Legit"

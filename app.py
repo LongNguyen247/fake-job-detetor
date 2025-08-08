@@ -7,7 +7,7 @@ user_input = st.text_area("Paste Job Description Here:")
 
 if st.button("Analyze Job Post"):
     if user_input.strip():
-        label, confidence = predict_job_post(user_input)
+        label, confidence = predict_job_post(user_input)      
         st.write(f"**Prediction:** {label}")
         st.write(f"**Confidence:** {confidence:.2f}")
     else:
